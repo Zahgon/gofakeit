@@ -1,6 +1,5 @@
 package data
 
-// From IMDB - Top 250 Movies subset to 100
 var Movies = map[string][]string{
 	"name": {
 		"12 Years a Slave",

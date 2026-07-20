@@ -1,22 +1,22 @@
 package gofakeit
 
-func BookTitle() string { return bookTitle(GlobalFaker) }
+func BookTitle() string { _ = "STUB: not implemented"; return "" }
 
-func (f *Faker) BookTitle() string { return bookTitle(f) }
+func (f *Faker) BookTitle() string { _ = "STUB: not implemented"; return "" }
 
-func bookTitle(f *Faker) string { return getRandValue(f, []string{"book", "title"}) }
+func bookTitle(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func BookAuthor() string { return bookAuthor(GlobalFaker) }
+func BookAuthor() string { _ = "STUB: not implemented"; return "" }
 
-func (f *Faker) BookAuthor() string { return bookAuthor(f) }
+func (f *Faker) BookAuthor() string { _ = "STUB: not implemented"; return "" }
 
-func bookAuthor(f *Faker) string { return getRandValue(f, []string{"book", "author"}) }
+func bookAuthor(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func BookGenre() string { return bookGenre(GlobalFaker) }
+func BookGenre() string { _ = "STUB: not implemented"; return "" }
 
-func (f *Faker) BookGenre() string { return bookGenre(f) }
+func (f *Faker) BookGenre() string { _ = "STUB: not implemented"; return "" }
 
-func bookGenre(f *Faker) string { return getRandValue(f, []string{"book", "genre"}) }
+func bookGenre(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
 type BookInfo struct {
 	Title  string `json:"title" xml:"name"`
@@ -24,73 +24,10 @@ type BookInfo struct {
 	Genre  string `json:"genre" xml:"genre"`
 }
 
-func Book() *BookInfo { return book(GlobalFaker) }
+func Book() *BookInfo { _ = "STUB: not implemented"; return nil }
 
-func (f *Faker) Book() *BookInfo { return book(f) }
+func (f *Faker) Book() *BookInfo { _ = "STUB: not implemented"; return nil }
 
-func book(f *Faker) *BookInfo {
-	return &BookInfo{
-		Title:  bookTitle(f),
-		Author: bookAuthor(f),
-		Genre:  bookGenre(f),
-	}
-}
+func book(f *Faker) *BookInfo { _ = "STUB: not implemented"; return nil }
 
-func addBookLookup() {
-	AddFuncLookup("book", Info{
-		Display:     "Book",
-		Category:    "book",
-		Description: "Written or printed work consisting of pages bound together, covering various subjects or stories",
-		Example: `{
-	"title": "Anna Karenina",
-	"author": "Toni Morrison",
-	"genre": "Thriller"
-}`,
-		Output:      "map[string]string",
-		ContentType: "application/json",
-		Aliases:     []string{"printed", "pages", "bound", "subjects", "stories", "literature", "text"},
-		Keywords:    []string{"written", "work", "consisting", "anna", "karenina", "toni", "morrison", "thriller"},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return book(f), nil
-		},
-	})
-
-	AddFuncLookup("booktitle", Info{
-		Display:     "Title",
-		Category:    "book",
-		Description: "The specific name given to a book",
-		Example:     "Hamlet",
-		Output:      "string",
-		Aliases:     []string{"title", "name", "specific", "given", "heading"},
-		Keywords:    []string{"book", "identification", "hamlet", "naming", "designation", "label", "caption"},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return bookTitle(f), nil
-		},
-	})
-
-	AddFuncLookup("bookauthor", Info{
-		Display:     "Author",
-		Category:    "book",
-		Description: "The individual who wrote or created the content of a book",
-		Example:     "Mark Twain",
-		Output:      "string",
-		Aliases:     []string{"author", "writer", "creator", "individual", "content", "literary"},
-		Keywords:    []string{"book", "wrote", "created", "mark", "twain", "composer", "originator", "penned"},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return bookAuthor(f), nil
-		},
-	})
-
-	AddFuncLookup("bookgenre", Info{
-		Display:     "Genre",
-		Category:    "book",
-		Description: "Category or type of book defined by its content, style, or form",
-		Example:     "Adventure",
-		Output:      "string",
-		Aliases:     []string{"type", "content", "style", "form", "literature", "classification"},
-		Keywords:    []string{"book", "category", "defined", "adventure", "fiction", "non-fiction", "mystery", "romance", "sci-fi"},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return bookGenre(f), nil
-		},
-	})
-}
+func addBookLookup() { _ = "STUB: not implemented"; return }

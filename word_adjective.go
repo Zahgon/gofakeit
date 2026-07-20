@@ -1,274 +1,51 @@
 package gofakeit
 
-// Adjective will generate a random adjective
-func Adjective() string { return adjective(GlobalFaker) }
+func Adjective() string { _ = "STUB: not implemented"; return "" }
 
-// Adjective will generate a random adjective
-func (f *Faker) Adjective() string { return adjective(f) }
+func (f *Faker) Adjective() string { _ = "STUB: not implemented"; return "" }
 
-func adjective(f *Faker) string {
-	var adjType = map[int]string{
-		0: "adjective_descriptive",
-		1: "adjective_quantitative",
-		2: "adjective_proper",
-		3: "adjective_demonstrative",
-		4: "adjective_possessive",
-		5: "adjective_interrogative",
-		6: "adjective_indefinite",
-	}
-	return getRandValue(f, []string{"word", adjType[number(f, 0, 6)]})
-}
+func adjective(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveDescriptive will generate a random descriptive adjective
-func AdjectiveDescriptive() string { return adjectiveDescriptive(GlobalFaker) }
+func AdjectiveDescriptive() string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveDescriptive will generate a random descriptive adjective
-func (f *Faker) AdjectiveDescriptive() string { return adjectiveDescriptive(f) }
+func (f *Faker) AdjectiveDescriptive() string { _ = "STUB: not implemented"; return "" }
 
-func adjectiveDescriptive(f *Faker) string {
-	return getRandValue(f, []string{"word", "adjective_descriptive"})
-}
+func adjectiveDescriptive(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveQuantitative will generate a random quantitative adjective
-func AdjectiveQuantitative() string { return adjectiveQuantitative(GlobalFaker) }
+func AdjectiveQuantitative() string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveQuantitative will generate a random quantitative adjective
-func (f *Faker) AdjectiveQuantitative() string { return adjectiveQuantitative(f) }
+func (f *Faker) AdjectiveQuantitative() string { _ = "STUB: not implemented"; return "" }
 
-func adjectiveQuantitative(f *Faker) string {
-	return getRandValue(f, []string{"word", "adjective_quantitative"})
-}
+func adjectiveQuantitative(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveProper will generate a random proper adjective
-func AdjectiveProper() string { return adjectiveProper(GlobalFaker) }
+func AdjectiveProper() string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveProper will generate a random proper adjective
-func (f *Faker) AdjectiveProper() string { return adjectiveProper(f) }
+func (f *Faker) AdjectiveProper() string { _ = "STUB: not implemented"; return "" }
 
-func adjectiveProper(f *Faker) string {
-	return getRandValue(f, []string{"word", "adjective_proper"})
-}
+func adjectiveProper(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveDemonstrative will generate a random demonstrative adjective
-func AdjectiveDemonstrative() string { return adjectiveDemonstrative(GlobalFaker) }
+func AdjectiveDemonstrative() string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveDemonstrative will generate a random demonstrative adjective
-func (f *Faker) AdjectiveDemonstrative() string { return adjectiveDemonstrative(f) }
+func (f *Faker) AdjectiveDemonstrative() string { _ = "STUB: not implemented"; return "" }
 
-func adjectiveDemonstrative(f *Faker) string {
-	return getRandValue(f, []string{"word", "adjective_demonstrative"})
-}
+func adjectiveDemonstrative(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-// AdjectivePossessive will generate a random possessive adjective
-func AdjectivePossessive() string { return adjectivePossessive(GlobalFaker) }
+func AdjectivePossessive() string { _ = "STUB: not implemented"; return "" }
 
-// AdjectivePossessive will generate a random possessive adjective
-func (f *Faker) AdjectivePossessive() string { return adjectivePossessive(f) }
+func (f *Faker) AdjectivePossessive() string { _ = "STUB: not implemented"; return "" }
 
-func adjectivePossessive(f *Faker) string {
-	return getRandValue(f, []string{"word", "adjective_possessive"})
-}
+func adjectivePossessive(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveInterrogative will generate a random interrogative adjective
-func AdjectiveInterrogative() string { return adjectiveInterrogative(GlobalFaker) }
+func AdjectiveInterrogative() string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveInterrogative will generate a random interrogative adjective
-func (f *Faker) AdjectiveInterrogative() string { return adjectiveInterrogative(f) }
+func (f *Faker) AdjectiveInterrogative() string { _ = "STUB: not implemented"; return "" }
 
-func adjectiveInterrogative(f *Faker) string {
-	return getRandValue(f, []string{"word", "adjective_interrogative"})
-}
+func adjectiveInterrogative(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveIndefinite will generate a random indefinite adjective
-func AdjectiveIndefinite() string { return adjectiveIndefinite(GlobalFaker) }
+func AdjectiveIndefinite() string { _ = "STUB: not implemented"; return "" }
 
-// AdjectiveIndefinite will generate a random indefinite adjective
-func (f *Faker) AdjectiveIndefinite() string { return adjectiveIndefinite(f) }
+func (f *Faker) AdjectiveIndefinite() string { _ = "STUB: not implemented"; return "" }
 
-func adjectiveIndefinite(f *Faker) string {
-	return getRandValue(f, []string{"word", "adjective_indefinite"})
-}
+func adjectiveIndefinite(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func addWordAdjectiveLookup() {
-	AddFuncLookup("adjective", Info{
-		Display:     "Adjective",
-		Category:    "word",
-		Description: "Word describing or modifying a noun",
-		Example:     "genuine",
-		Output:      "string",
-		Aliases: []string{
-			"descriptor term",
-			"qualifying modifier",
-			"attribute marker",
-			"descriptive label",
-			"noun qualifier",
-		},
-		Keywords: []string{
-			"noun", "speech", "quality", "attribute",
-			"characteristic", "property", "trait", "descriptive", "modifier",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return adjective(f), nil
-		},
-	})
-
-	AddFuncLookup("adjectivedescriptive", Info{
-		Display:     "Descriptive Adjective",
-		Category:    "word",
-		Description: "Adjective that provides detailed characteristics about a noun",
-		Example:     "brave",
-		Output:      "string",
-		Aliases: []string{
-			"qualitative adjective",
-			"detail-rich modifier",
-			"characterizing term",
-			"specific descriptor",
-			"noun enhancer",
-		},
-		Keywords: []string{
-			"adjective", "word", "describing", "modifying", "attribute",
-			"property", "trait", "feature", "aspect", "detailed", "characteristics",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return adjectiveDescriptive(f), nil
-		},
-	})
-
-	AddFuncLookup("adjectivequantitative", Info{
-		Display:     "Quantitative Adjective",
-		Category:    "word",
-		Description: "Adjective that indicates the quantity or amount of something",
-		Example:     "a little",
-		Output:      "string",
-		Aliases: []string{
-			"numeric descriptor",
-			"cardinal qualifier",
-			"quantifier adjective",
-			"how many indicator",
-			"magnitude marker",
-		},
-		Keywords: []string{
-			"adjective", "quantitative", "word", "describing", "modifying",
-			"count", "volume", "extent", "degree", "magnitude", "quantity", "amount",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return adjectiveQuantitative(f), nil
-		},
-	})
-
-	AddFuncLookup("adjectiveproper", Info{
-		Display:     "Proper Adjective",
-		Category:    "word",
-		Description: "Adjective derived from a proper noun, often used to describe nationality or origin",
-		Example:     "Afghan",
-		Output:      "string",
-		Aliases: []string{
-			"nationality adjective",
-			"eponym-derived",
-			"proper-noun based",
-			"demonym adjective",
-			"origin descriptor",
-		},
-		Keywords: []string{
-			"adjective", "noun", "word", "describing",
-			"cultural", "regional", "ethnic", "linguistic", "heritage",
-			"proper", "nationality",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return adjectiveProper(f), nil
-		},
-	})
-
-	AddFuncLookup("adjectivedemonstrative", Info{
-		Display:     "Demonstrative Adjective",
-		Category:    "word",
-		Description: "Adjective used to point out specific things",
-		Example:     "this",
-		Output:      "string",
-		Aliases: []string{
-			"demonstrative adjective",
-			"pointing adjective",
-			"deictic adjective",
-			"proximal distal adjective",
-			"reference adjective",
-		},
-		Keywords: []string{
-			"adjective", "demonstrative", "deictic",
-			"this", "that", "these", "those",
-			"proximal", "distal", "near", "far",
-			"pointer", "reference", "specific", "grammar",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return adjectiveDemonstrative(f), nil
-		},
-	})
-
-	AddFuncLookup("adjectivepossessive", Info{
-		Display:     "Possessive Adjective",
-		Category:    "word",
-		Description: "Adjective indicating ownership or possession",
-		Example:     "my",
-		Output:      "string",
-		Aliases: []string{
-			"ownership adjective",
-			"owners descriptor",
-			"possessive determiner",
-			"belonging indicator",
-			"proprietary modifier",
-		},
-		Keywords: []string{
-			"adjective", "word", "grammar",
-			"my", "your", "his", "her", "its", "our", "their",
-			"belong", "possessive", "ownership",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return adjectivePossessive(f), nil
-		},
-	})
-
-	AddFuncLookup("adjectiveinterrogative", Info{
-		Display:     "Interrogative Adjective",
-		Category:    "word",
-		Description: "Adjective used to ask questions",
-		Example:     "what",
-		Output:      "string",
-		Aliases: []string{
-			"interrogative adjective",
-			"question word",
-			"asking adjective",
-			"inquiry word",
-			"grammar adjective",
-		},
-		Keywords: []string{
-			"adjective", "word", "grammar", "what", "which", "whose",
-			"question", "inquiry", "interrogation", "interrogative", "ask",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return adjectiveInterrogative(f), nil
-		},
-	})
-
-	AddFuncLookup("adjectiveindefinite", Info{
-		Display:     "Indefinite Adjective",
-		Category:    "word",
-		Description: "Adjective describing a non-specific noun",
-		Example:     "few",
-		Output:      "string",
-		Aliases: []string{
-			"unspecified adjective",
-			"quantifier-like",
-			"noncount marker",
-			"broad determiner",
-			"approximate amount",
-		},
-		Keywords: []string{
-			"adjective", "noun", "word", "grammar",
-			"some", "any", "many", "few", "several", "various", "certain",
-			"indefinite", "non-specific",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return adjectiveIndefinite(f), nil
-		},
-	})
-
-}
+func addWordAdjectiveLookup() { _ = "STUB: not implemented"; return }

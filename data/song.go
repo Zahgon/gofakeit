@@ -1,11 +1,5 @@
 package data
 
-// Songs: Year-end Charts Hot 100 Songs from Billboard
-// Source: https://www.billboard.com/charts/year-end/hot-100-songs/
-
-// Artists: Greatest of All Time Artists based on Billboard rate
-// Source: https://www.billboard.com/charts/greatest-of-all-time-artists/
-
 var Songs = map[string][]string{
 	"name": {
 		"A Bar Song (Tipsy)",

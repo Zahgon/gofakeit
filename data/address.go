@@ -1,6 +1,5 @@
 package data
 
-// Address consists of address information
 var Address = map[string][]string{
 	"number":        {"#####", "####", "###"},
 	"street_prefix": {"North", "East", "West", "South", "New", "Lake", "Port"},

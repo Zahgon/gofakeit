@@ -1,6 +1,5 @@
 package data
 
-// Minecraft consists of various minecraft items
 var Minecraft = map[string][]string{
 	"ore":             {"coal", "copper", "iron", "gold", "redstone", "lapis", "diamond", "emerald"},
 	"wood":            {"oak", "spruce", "birch", "jungle", "acacia", "dark oak"},

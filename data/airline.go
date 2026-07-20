@@ -1,6 +1,5 @@
 package data
 
-// Airline consists of various airline information
 var Airline = map[string][]string{
 	"aircraft_type": {
 		"narrowbody",

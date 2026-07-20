@@ -1,274 +1,51 @@
 package gofakeit
 
-import (
-	"strings"
-)
+func Fruit() string { _ = "STUB: not implemented"; return "" }
 
-// Fruit will return a random fruit name
-func Fruit() string { return fruit(GlobalFaker) }
+func (f *Faker) Fruit() string { _ = "STUB: not implemented"; return "" }
 
-// Fruit will return a random fruit name
-func (f *Faker) Fruit() string { return fruit(f) }
+func fruit(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func fruit(f *Faker) string { return getRandValue(f, []string{"food", "fruit"}) }
+func Vegetable() string { _ = "STUB: not implemented"; return "" }
 
-// Vegetable will return a random vegetable name
-func Vegetable() string { return vegetable(GlobalFaker) }
+func (f *Faker) Vegetable() string { _ = "STUB: not implemented"; return "" }
 
-// Vegetable will return a random vegetable name
-func (f *Faker) Vegetable() string { return vegetable(f) }
+func vegetable(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func vegetable(f *Faker) string { return getRandValue(f, []string{"food", "vegetable"}) }
+func Breakfast() string { _ = "STUB: not implemented"; return "" }
 
-// Breakfast will return a random breakfast name
-func Breakfast() string { return breakfast(GlobalFaker) }
+func (f *Faker) Breakfast() string { _ = "STUB: not implemented"; return "" }
 
-// Breakfast will return a random breakfast name
-func (f *Faker) Breakfast() string { return breakfast(f) }
+func breakfast(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func breakfast(f *Faker) string {
-	v := getRandValue(f, []string{"food", "breakfast"})
-	return strings.ToUpper(v[:1]) + v[1:]
-}
+func Lunch() string { _ = "STUB: not implemented"; return "" }
 
-// Lunch will return a random lunch name
-func Lunch() string { return lunch(GlobalFaker) }
+func (f *Faker) Lunch() string { _ = "STUB: not implemented"; return "" }
 
-// Lunch will return a random lunch name
-func (f *Faker) Lunch() string { return lunch(f) }
+func lunch(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func lunch(f *Faker) string {
-	v := getRandValue(f, []string{"food", "lunch"})
-	return strings.ToUpper(v[:1]) + v[1:]
-}
+func Dinner() string { _ = "STUB: not implemented"; return "" }
 
-// Dinner will return a random dinner name
-func Dinner() string { return dinner(GlobalFaker) }
+func (f *Faker) Dinner() string { _ = "STUB: not implemented"; return "" }
 
-// Dinner will return a random dinner name
-func (f *Faker) Dinner() string { return dinner(f) }
+func dinner(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func dinner(f *Faker) string {
-	v := getRandValue(f, []string{"food", "dinner"})
-	return strings.ToUpper(v[:1]) + v[1:]
-}
+func Drink() string { _ = "STUB: not implemented"; return "" }
 
-// Drink will return a random drink name
-func Drink() string { return drink(GlobalFaker) }
+func (f *Faker) Drink() string { _ = "STUB: not implemented"; return "" }
 
-// Drink will return a random drink name
-func (f *Faker) Drink() string { return drink(f) }
+func drink(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func drink(f *Faker) string {
-	v := getRandValue(f, []string{"food", "drink"})
-	return strings.ToUpper(v[:1]) + v[1:]
-}
+func Snack() string { _ = "STUB: not implemented"; return "" }
 
-// Snack will return a random snack name
-func Snack() string { return snack(GlobalFaker) }
+func (f *Faker) Snack() string { _ = "STUB: not implemented"; return "" }
 
-// Snack will return a random snack name
-func (f *Faker) Snack() string { return snack(f) }
+func snack(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func snack(f *Faker) string {
-	v := getRandValue(f, []string{"food", "snack"})
-	return strings.ToUpper(v[:1]) + v[1:]
-}
+func Dessert() string { _ = "STUB: not implemented"; return "" }
 
-// Dessert will return a random dessert name
-func Dessert() string { return dessert(GlobalFaker) }
+func (f *Faker) Dessert() string { _ = "STUB: not implemented"; return "" }
 
-// Dessert will return a random dessert name
-func (f *Faker) Dessert() string { return dessert(f) }
+func dessert(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func dessert(f *Faker) string {
-	v := getRandValue(f, []string{"food", "dessert"})
-	return strings.ToUpper(v[:1]) + v[1:]
-}
-
-func addFoodLookup() {
-	AddFuncLookup("fruit", Info{
-		Display:     "Fruit",
-		Category:    "food",
-		Description: "Edible plant part, typically sweet, enjoyed as a natural snack or dessert",
-		Example:     "Peach",
-		Output:      "string",
-		Aliases: []string{
-			"fruit item",
-			"natural snack",
-			"sweet produce",
-			"edible plant food",
-			"dessert fruit",
-		},
-		Keywords: []string{
-			"edible", "plant", "peach",
-			"snack", "dessert", "sweet", "natural",
-			"produce", "fresh",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return fruit(f), nil
-		},
-	})
-
-	AddFuncLookup("vegetable", Info{
-		Display:     "Vegetable",
-		Category:    "food",
-		Description: "Edible plant or part of a plant, often used in savory cooking or salads",
-		Example:     "Amaranth Leaves",
-		Output:      "string",
-		Aliases: []string{
-			"veggie",
-			"plant food",
-			"green produce",
-			"savory food",
-			"leafy edible",
-		},
-		Keywords: []string{
-			"greens", "produce", "amaranth",
-			"leaves", "cooking", "salads", "plant",
-			"edible", "savory",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return vegetable(f), nil
-		},
-	})
-
-	AddFuncLookup("breakfast", Info{
-		Display:     "Breakfast",
-		Category:    "food",
-		Description: "First meal of the day, typically eaten in the morning",
-		Example:     "Blueberry banana happy face pancakes",
-		Output:      "string",
-		Aliases: []string{
-			"morning meal",
-			"first meal",
-			"day starter",
-			"early food",
-			"sunrise meal",
-		},
-		Keywords: []string{
-			"morning", "meal", "start",
-			"pancakes", "blueberry", "banana", "food",
-			"first", "early",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return breakfast(f), nil
-		},
-	})
-
-	AddFuncLookup("lunch", Info{
-		Display:     "Lunch",
-		Category:    "food",
-		Description: "Midday meal, often lighter than dinner, eaten around noon",
-		Example:     "No bake hersheys bar pie",
-		Output:      "string",
-		Aliases: []string{
-			"midday meal",
-			"noon food",
-			"afternoon meal",
-			"light meal",
-			"daytime meal",
-		},
-		Keywords: []string{
-			"meal", "midday", "noon",
-			"lighter", "food", "pie", "bar",
-			"afternoon",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return lunch(f), nil
-		},
-	})
-
-	AddFuncLookup("dinner", Info{
-		Display:     "Dinner",
-		Category:    "food",
-		Description: "Evening meal, typically the day's main and most substantial meal",
-		Example:     "Wild addicting dip",
-		Output:      "string",
-		Aliases: []string{
-			"evening meal",
-			"main meal",
-			"days supper",
-			"night food",
-			"hearty meal",
-		},
-		Keywords: []string{
-			"supper", "evening", "meal",
-			"main", "substantial", "night", "food",
-			"heavy", "course",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return dinner(f), nil
-		},
-	})
-
-	AddFuncLookup("drink", Info{
-		Display:     "Drink",
-		Category:    "food",
-		Description: "Liquid consumed for hydration, pleasure, or nutritional benefits",
-		Example:     "Soda",
-		Output:      "string",
-		Aliases: []string{
-			"beverage",
-			"refreshment",
-			"hydration",
-			"liquid food",
-			"consumable fluid",
-		},
-		Keywords: []string{
-			"soda", "liquid",
-			"pleasure", "nutrition", "fluid", "quencher",
-			"consumed",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return drink(f), nil
-		},
-	})
-
-	AddFuncLookup("snack", Info{
-		Display:     "Snack",
-		Category:    "food",
-		Description: "Small, quick food item eaten between meals",
-		Example:     "Trail mix",
-		Output:      "string",
-		Aliases: []string{
-			"light bite",
-			"quick food",
-			"mini meal",
-			"finger food",
-			"nibble",
-		},
-		Keywords: []string{
-			"between", "meals", "quick",
-			"small", "food", "item", "random",
-			"bite", "treat",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return snack(f), nil
-		},
-	})
-
-	AddFuncLookup("dessert", Info{
-		Display:     "Dessert",
-		Category:    "food",
-		Description: "Sweet treat often enjoyed after a meal",
-		Example:     "French napoleons",
-		Output:      "string",
-		Aliases: []string{
-			"after meal sweet",
-			"pastry treat",
-			"confection",
-			"final course",
-			"delicacy",
-		},
-		Keywords: []string{
-			"sweet", "treat", "meal",
-			"after", "pastry", "cake", "enjoyed",
-			"final", "sugar",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return dessert(f), nil
-		},
-	})
-
-}
+func addFoodLookup() { _ = "STUB: not implemented"; return }

@@ -1,19 +1,16 @@
 package data
 
-// Prefixes for ISBN standards
 const (
 	ISBN13Prefix = "978"
 	ISBN10Prefix = "979"
 )
 
-// ISBNRule defines a registrant rule range and its length
 type ISBNRule struct {
 	Min    string
 	Max    string
 	Length int
 }
 
-// ISBNRules maps prefix -> registration group -> registrant rules
 var ISBNRules = map[string]map[string][]ISBNRule{
 	ISBN13Prefix: {
 		"0": {

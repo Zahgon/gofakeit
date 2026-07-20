@@ -1,6 +1,5 @@
 package data
 
-// CreditCardInfo contains credit card info
 type CreditCardInfo struct {
 	Display  string
 	Patterns []uint
@@ -9,16 +8,13 @@ type CreditCardInfo struct {
 	Code     CreditCardCode
 }
 
-// CreditCardCode contains code type and size
 type CreditCardCode struct {
 	Name string
 	Size uint
 }
 
-// CreditCardTypes is an array of credit card types
 var CreditCardTypes = []string{"visa", "mastercard", "american-express", "diners-club", "discover", "jcb", "unionpay", "maestro", "elo", "hiper", "hipercard"}
 
-// CreditCards contains payment information
 var CreditCards = map[string]CreditCardInfo{
 	"visa": {
 		Display:  "Visa",

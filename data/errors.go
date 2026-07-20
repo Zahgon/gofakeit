@@ -67,39 +67,39 @@ var Error = map[string][]string{
 		"wrote more than the declared Content-Length",
 		"{httpmethod} not allowed",
 	},
-	"http_client": { // 400s
-		"bad request",                   // 400
-		"unauthorized",                  // 401
-		"payment required",              // 402
-		"forbidden",                     // 403
-		"not found",                     // 404
-		"method not allowed",            // 405
-		"not acceptable",                // 406
-		"proxy authentication required", // 407
-		"request timeout",               // 408
-		"conflict",                      // 409
-		"gone",                          // 410
-		"length required",               // 411
-		"precondition failed",           // 412
-		"payload too large",             // 413
-		"URI too long",                  // 414
-		"unsupported media type",        // 415
-		"range not satisfiable",         // 416
-		"expectation failed",            // 417
-		"im a teapot",                   // 418
+	"http_client": {
+		"bad request",
+		"unauthorized",
+		"payment required",
+		"forbidden",
+		"not found",
+		"method not allowed",
+		"not acceptable",
+		"proxy authentication required",
+		"request timeout",
+		"conflict",
+		"gone",
+		"length required",
+		"precondition failed",
+		"payload too large",
+		"URI too long",
+		"unsupported media type",
+		"range not satisfiable",
+		"expectation failed",
+		"im a teapot",
 	},
-	"http_server": { // 500s
-		"internal server error",           // 500
-		"not implemented",                 // 501
-		"bad gateway",                     // 502
-		"service unavailable",             // 503
-		"gateway timeout",                 // 504
-		"http version not supported",      // 505
-		"variant also negotiates",         // 506
-		"insufficient storage",            // 507
-		"loop detected",                   // 508
-		"not extended",                    // 510
-		"network authentication required", // 511
+	"http_server": {
+		"internal server error",
+		"not implemented",
+		"bad gateway",
+		"service unavailable",
+		"gateway timeout",
+		"http version not supported",
+		"variant also negotiates",
+		"insufficient storage",
+		"loop detected",
+		"not extended",
+		"network authentication required",
 	},
 	"runtime": {
 		"panic: runtime error: invalid memory address or nil pointer dereference",

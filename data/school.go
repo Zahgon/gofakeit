@@ -1,6 +1,5 @@
 package data
 
-// School type and names
 var School = map[string][]string{
 	"type":      {"Elementary School", "Middle School", "University", "High School", "Kindergarten", "Academy", "College", "Institute"},
 	"isPrivate": {"Private", "State"},

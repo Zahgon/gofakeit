@@ -1,6 +1,5 @@
 package data
 
-// Data consists of the main set of fake information
 var Data = map[string]map[string][]string{
 	"person":    Person,
 	"auth":      Auth,
@@ -38,57 +37,16 @@ var Data = map[string]map[string][]string{
 	"bank":      Bank,
 }
 
-func List() map[string][]string {
-	var list = make(map[string][]string)
+func List() map[string][]string { _ = "STUB: not implemented"; return nil }
 
-	// Loop through the data and add the keys to the list
-	for key := range Data {
-		list[key] = []string{}
+func Get(key string) map[string][]string { _ = "STUB: not implemented"; return nil }
 
-		// Loop through the sub data and add the keys to the list
-		for subkey := range Data[key] {
-			list[key] = append(list[key], subkey)
-		}
-	}
+func Set(key string, data map[string][]string) { _ = "STUB: not implemented"; return }
 
-	return list
-}
+func Remove(key string) { _ = "STUB: not implemented"; return }
 
-func Get(key string) map[string][]string {
-	// Make sure the key exists, if not return an empty map
-	if _, ok := Data[key]; !ok {
-		return make(map[string][]string)
-	}
+func GetSubData(key, subkey string) []string { _ = "STUB: not implemented"; return nil }
 
-	return Data[key]
-}
+func SetSub(key, subkey string, data []string) { _ = "STUB: not implemented"; return }
 
-func Set(key string, data map[string][]string) {
-	Data[key] = data
-}
-
-func Remove(key string) {
-	delete(Data, key)
-}
-
-func GetSubData(key, subkey string) []string {
-	// Make sure the key exists, if not return an empty map
-	if _, ok := Data[key]; !ok {
-		return []string{}
-	}
-
-	return Data[key][subkey]
-}
-
-func SetSub(key, subkey string, data []string) {
-	// Make sure the key exists, if not add it
-	if _, ok := Data[key]; !ok {
-		Data[key] = make(map[string][]string)
-	}
-
-	Data[key][subkey] = data
-}
-
-func RemoveSub(key, subkey string) {
-	delete(Data[key], subkey)
-}
+func RemoveSub(key, subkey string) { _ = "STUB: not implemented"; return }

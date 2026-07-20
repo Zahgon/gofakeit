@@ -1,6 +1,5 @@
 package data
 
-// Job consists of job data
 var Job = map[string][]string{
 	"title": {
 		"Accountant", "Actor", "Acrobat", "Administrative Assistant", "Administrator",

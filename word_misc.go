@@ -1,54 +1,15 @@
 package gofakeit
 
-// Interjection will generate a random word expressing emotion
-func Interjection() string { return interjection(GlobalFaker) }
+func Interjection() string { _ = "STUB: not implemented"; return "" }
 
-// Interjection will generate a random word expressing emotion
-func (f *Faker) Interjection() string { return interjection(f) }
+func (f *Faker) Interjection() string { _ = "STUB: not implemented"; return "" }
 
-func interjection(f *Faker) string { return getRandValue(f, []string{"word", "interjection"}) }
+func interjection(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-// LoremIpsumWord will generate a random word
-func LoremIpsumWord() string { return loremIpsumWord(GlobalFaker) }
+func LoremIpsumWord() string { _ = "STUB: not implemented"; return "" }
 
-// LoremIpsumWord will generate a random word
-func (f *Faker) LoremIpsumWord() string { return loremIpsumWord(f) }
+func (f *Faker) LoremIpsumWord() string { _ = "STUB: not implemented"; return "" }
 
-func loremIpsumWord(f *Faker) string { return getRandValue(f, []string{"lorem", "word"}) }
+func loremIpsumWord(f *Faker) string { _ = "STUB: not implemented"; return "" }
 
-func addWordMiscLookup() {
-	AddFuncLookup("interjection", Info{
-		Display:     "Interjection",
-		Category:    "word",
-		Description: "Word expressing emotion",
-		Example:     "wow",
-		Output:      "string",
-		Aliases:     []string{"emotional expression", "feeling word", "reaction term", "exclamation element"},
-		Keywords:    []string{"emotion", "word", "expression", "feeling", "reaction", "exclamation", "utterance", "ejaculation", "emotional"},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return interjection(f), nil
-		},
-	})
-
-	AddFuncLookup("loremipsumword", Info{
-		Display:     "Lorem Ipsum Word",
-		Category:    "word",
-		Description: "Word of the Lorem Ipsum placeholder text used in design and publishing",
-		Example:     "quia",
-		Output:      "string",
-		Aliases: []string{
-			"lorem word",
-			"ipsum word",
-			"placeholder word",
-			"latin word",
-		},
-		Keywords: []string{
-			"lorem", "ipsum", "word", "placeholder",
-			"latin", "dummy", "filler", "text",
-			"typography", "mockup",
-		},
-		Generate: func(f *Faker, m *MapParams, info *Info) (any, error) {
-			return loremIpsumWord(f), nil
-		},
-	})
-}
+func addWordMiscLookup() { _ = "STUB: not implemented"; return }

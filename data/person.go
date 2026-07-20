@@ -1,6 +1,5 @@
 package data
 
-// Person consists of a slice of people information
 var Person = map[string][]string{
 	"prefix": {
 		"Mr.", "Mrs.", "Ms.", "Miss", "Dr.",
@@ -550,11 +549,10 @@ var Person = map[string][]string{
 		"###-###-####", "(###)###-####", "1-###-###-####", "###.###.####",
 	},
 	"social_media": {
-		// Generic handles
+
 		"{gamertag}",
 		"@{gamertag}",
 
-		// Social Websites
 		"https://x.com/{gamertag}",
 		"https://instagram.com/{gamertag}",
 		"https://linkedin.com/in/{gamertag}",
@@ -562,102 +560,84 @@ var Person = map[string][]string{
 		"https://tiktok.com/@{gamertag}",
 		"https://facebook.com/{gamertag}",
 	},
-	// Bio contains sentence templates for personal biographies
-	// phrased to avoid article/plural pitfalls and work with Generate
+
 	"bio": {
-		// short punchy
+
 		"Started in {city} as {jobtitle}, now in {productcategory}",
 		"{programminglanguage} developer with a side path in {productcategory}",
 		"Former {jobtitle} now focused on {productcategory}",
 		"Born in {country}, moved into {jobtitle} after studying {programminglanguage}",
 
-		// hipster flavor
 		"{jobtitle} into {hipsterword} and {hipsterword}, based in {city}",
 		"Known for a {hipsterword} aesthetic and work in {country} as {jobtitle}",
 		"{jobtitle} with a taste for {hipsterword} culture in {city}",
 		"From {country}, brought {hipsterword} vibes to {city} while working in {jobtitle}",
 
-		// beer
 		"{jobtitle} by day, brewing {beerstyle} after hours in {city}",
 		"Known for a {beerhop} IPA recipe and a career in {country} as {jobtitle}",
 		"Started brewing {beerstyle} in {city}, later specializing in {productcategory} as {jobtitle}",
 		"{jobtitle} who experiments with {beeryeast} fermentation on weekends",
 
-		// cars
 		"{jobtitle} who drives a {carmaker} {carmodel} and trains in {hobby} around {city}",
 		"Collector of {carmaker} models and working in {country} as {jobtitle}",
 		"{jobtitle} with a soft spot for {carfueltype} builds and hands-on {hobby} in {city}",
 		"Restored a {carmaker} {carmodel} and shifted into {jobtitle}",
 
-		// movies
 		"{jobtitle} obsessed with {moviegenre} cinema and hands-on {hobby} in {city}",
 		"Known for deep dives into {moviegenre} and a career in {country} as {jobtitle}",
 		"{jobtitle} who studies {moviegenre} and practices {hobby} after work",
 
-		// music
 		"{jobtitle} who codes to {songgenre} playlists in {city}",
 		"Workdays in {country} as {jobtitle}, nights with {songgenre} sessions",
 		"{jobtitle} blending {songgenre} jams with weekend {hobby}",
 
-		// celebrity
 		"{jobtitle} inspired by {celebrityactor}, active with {hobby} in {city}",
 		"Takes cues from {celebritybusiness} playbooks while working in {country} as {jobtitle}",
 		"{jobtitle} who follows {celebritysport} and keeps up daily practice in {hobby}",
 
-		// books
 		"{jobtitle} who reads {bookgenre} and keeps up with {hobby} in {city}",
 		"Career in {country} as {jobtitle}, library stacked with {bookgenre}",
 		"Moved into {jobtitle} after reading {booktitle} by {bookauthor}",
 
-		// school
 		"{jobtitle} with roots at {school}, now active in {hobby} around {city}",
 		"Known for a {school} background and work in {country} as {jobtitle}",
 		"{jobtitle} with a {school} degree and a habit of {verb} {noun} in {city}",
 
-		// pets
 		"{jobtitle} who cares about {animaltype} welfare and keeps up with {hobby}",
 		"Career in {country} as {jobtitle}, home life includes {petname}",
 		"{jobtitle} who volunteers with {animaltype} groups on weekends",
 
-		// color and aesthetic
 		"{jobtitle} drawn to {color} palettes and practical {hobby} in {city}",
 		"Recognized in {country} for a {color} aesthetic and work as {jobtitle}",
 		"{jobtitle} focused on {productfeature} with an eye for {color} design",
 
-		// medium mixed
 		"From {city}, discovered {hobby} while working as {jobtitle} at {company}",
 		"{jobtitle} by day and {hobby} enthusiast by night, currently in {country}",
 		"After {number:5,30} years in {city}, shifted focus to {productcategory}",
 		"Known for {verb} {noun} and practical {productcategory} work",
 
-		// story-ish
 		"From {city} to {country}, the path in {jobtitle} involved steady {verb} {noun} and {hobby}",
 		"Studied {programminglanguage} in {city} and built a name in {productcategory}",
 		"Moved into {jobtitle} after years of hands-on {hobby} across {country}",
 
-		// creative combos
 		"What began as {hobby} in {city} led to work in {productfeature} as {jobtitle}",
 		"Between {verb} {noun} and {hobby}, developed a steady path in {jobtitle} around {country}",
 		"{jobtitle} who studies {animal} behavior for fun and iterates on {noun} for work",
 
-		// compact one-liners
 		"{jobtitle} by trade, {hobby} by choice",
 		"Born in {country}, works in {productcategory}",
 		"{programminglanguage} roots with a focus on {productfeature}",
 		"From {city}, building in {productcategory} and keeping up with {hobby}",
 
-		// professional focus
 		"Specializes in {productcategory} as {jobtitle} in {city}",
 		"{jobtitle} with {programminglanguage} experience and ongoing {hobby}",
 		"Works in {productcategory} and keeps a steady practice in {hobby} around {country}",
 
-		// lifestyle crossovers
 		"Brews {beerstyle} while streaming {songgenre}, day job in {city} as {jobtitle}",
 		"Known for a {hipsterword} look and a shelf of {color} {animal} art",
 		"{jobtitle} with a {carmaker} {carmodel} and a taste for {moviegenre}",
 		"Reads {booktitle} by {bookauthor} and applies lessons in {jobtitle}",
 
-		// safe oddities
 		"{jobtitle} exploring {language} study and practical {hobby} in {city}",
 		"From {country}, building a path in {jobtitle} with {productcategory} focus",
 		"{programminglanguage} practitioner mixing {hobby} and {productfeature}",

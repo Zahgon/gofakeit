@@ -1,6 +1,5 @@
 package data
 
-// Aut
 var Auth = map[string][]string{
 	"username": {
 		"{firstname}{number:0,9999}",
